@@ -10,9 +10,9 @@
       <template v-else-if="slice.slice_type === 'quote'">
         <quote-slice :slice="slice"/>
       </template>
-      <!-- Test slice component -->
-      <template v-else-if="slice.slice_type === 'test_slice'">
-        <quote-slice :slice="slice"/>
+      <!-- Featured section component -->
+      <template v-else-if="slice.slice_type === 'section_featured'">
+        <section-featured :slice="slice"/>
       </template>
       <!-- Full Width Image slice component -->
       <template v-else-if="slice.slice_type === 'full_width_image'">
@@ -34,7 +34,7 @@
 // Imports for all slices
 const TextSlice = () => import("./slices/TextSlice.vue");
 const QuoteSlice = () => import("./slices/QuoteSlice.vue");
-const TestSlice = () => import("./slices/TestSlice.vue");
+const SectionFeatured = () => import("./slices/SectionFeatured.vue");
 const FullWidthImage = () => import("./slices/FullWidthImage.vue");
 const ImageGallery = () => import("./slices/ImageGallery.vue");
 const ImageHighlight = () => import("./slices/ImageHighlight.vue");
@@ -48,7 +48,7 @@ export default {
     FullWidthImage,
     ImageGallery,
     ImageHighlight,
-    TestSlice
+    SectionFeatured
   },
 }
 </script>

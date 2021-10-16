@@ -1,14 +1,16 @@
 <template>
-  <section class='content-section quote'>
-    <h1>Yooooooo</h1>
-    <blockquote class="block-quotation">{{ $prismic.asText(slice.primary.quote_text) }}</blockquote>
+  <section class='content-section section-feature'>
+    <h1>{{ $prismic.asText(slice.primary.heading) }}</h1>
+    <prismic-rich-text class="content-section" :class="'text-section-' + slice.slice_label" :field="slice.primary.content"/>
+    <prismic-image :field="slice.primary.background_image"/>
+    <!--    <blockquote class="block-quotation">{{ $prismic.asText(slice.primary.quote_text) }}</blockquote>-->
   </section>
 </template>
 
 <script>
 export default {
   props: ['slice'],
-  name: 'test-slice'
+  name: 'section-featured'
 }
 </script>
 
@@ -24,6 +26,7 @@ export default {
   line-height: 1.5em
   quotes: "“" "”" "‘" "’"
   text-align: center
+
   &:before
     color: #e9e9e9
     content: open-quote
@@ -34,6 +37,7 @@ export default {
     margin-left: 10px
     margin-right: 10px
     vertical-align: -0.3em
+
   &:after
     color: #e9e9e9
     content: open-quote
