@@ -1,0 +1,6 @@
+{
+  "libraries": [
+    "@/slices",
+    "vue-essential-slices"
+  ]
+}
