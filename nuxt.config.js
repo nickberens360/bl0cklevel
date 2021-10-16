@@ -54,7 +54,11 @@ export default {
    */
   modules: [
     // https://prismic-nuxt.js.org/
-    "@nuxtjs/prismic"
+    "@nuxtjs/prismic",
+    ["@nuxtjs/prismic", {
+      "endpoint": "https://bl0cklevel.cdn.prismic.io/api/v2",
+    }],
+    ["nuxt-sm"]
   ],
 
   prismic: {
@@ -75,12 +79,30 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    // transpile: ['vue-slicezone'],
+    transpile: ["vue-slicezone", "nuxt-sm"],
+    babel: {
+      // envName: server, client, modern
+      presets({ envName }) {
+        return [
+          [
+            '@nuxt/babel-preset-app',
+            {
+              corejs: { version: 3 }
+            }
+          ]
+        ]
+      }
+    },
     extend(config, ctx) {
       // to transform link with <nuxt-link> for the htmlSerializer
       config.resolve.alias["vue"] = "vue/dist/vue.common";
     }
   },
+
+  storybook: {
+    stories: ["~/slices/**/*.stories.js"]
+  },
+  ignore: ["**/*.stories.js"],
 
   generate: {
     fallback: "404.html" // Netlify reads a 404.html, Nuxt will load as an SPA
