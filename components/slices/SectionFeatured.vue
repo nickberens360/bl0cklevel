@@ -3,7 +3,6 @@
     <h1>{{ $prismic.asText(slice.primary.heading) }}</h1>
     <prismic-rich-text class="content-section" :class="'text-section-' + slice.slice_label" :field="slice.primary.content"/>
     <prismic-image :field="slice.primary.background_image"/>
-    <!--    <blockquote class="block-quotation">{{ $prismic.asText(slice.primary.quote_text) }}</blockquote>-->
   </section>
 </template>
 

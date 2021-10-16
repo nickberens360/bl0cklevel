@@ -61,6 +61,13 @@ export default {
     endpoint: "https://bl0cklevel.cdn.prismic.io/api/v2"
   },
 
+  buildModules: [
+    '@nuxtjs/vuetify'
+  ],
+  // vuetify: {
+  //   /* module options */
+  // }
+
   /*
    ** Build configuration
    */
