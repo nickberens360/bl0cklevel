@@ -10,6 +10,10 @@
       <template v-else-if="slice.slice_type === 'quote'">
         <quote-slice :slice="slice"/>
       </template>
+
+      <template v-else-if="slice.slice_type === 'test_slice'">
+        <test-slice :slice="slice"/>
+      </template>
       <!-- Featured section component -->
       <template v-else-if="slice.slice_type === 'section_featured'">
         <section-featured :slice="slice"/>
@@ -38,6 +42,7 @@ const SectionFeatured = () => import("./slices/SectionFeatured.vue");
 const FullWidthImage = () => import("./slices/FullWidthImage.vue");
 const ImageGallery = () => import("./slices/ImageGallery.vue");
 const ImageHighlight = () => import("./slices/ImageHighlight.vue");
+const TestSlice = () => import("./slices/TestSlice/index.vue");
 
 export default {
   props: ['slices'],
@@ -48,7 +53,8 @@ export default {
     FullWidthImage,
     ImageGallery,
     ImageHighlight,
-    SectionFeatured
+    SectionFeatured,
+    TestSlice
   },
 }
 </script>
