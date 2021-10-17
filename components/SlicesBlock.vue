@@ -34,6 +34,7 @@
   </div>
 </template>
 
+
 <script>
 // Imports for all slices
 const TextSlice = () => import("./slices/TextSlice.vue");
