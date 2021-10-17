@@ -1,14 +1,15 @@
 <template>
   <section class="section">
-    <h1>sup</h1>
-    <prismic-rich-text v-if="slice.primary.title" :field="slice.primary.title" class="title" />
+    <prismic-rich-text :field="slice.primary.title" class="title" />
     <prismic-rich-text :field="slice.primary.description" />
+    <prismic-image :field="slice.primary.image" />
+    <span :style="`color: ${slice.primary.picker}`">Some Text</span>
   </section>
 </template>
 
 <script>
 export default {
-  name: "TextImageRight",
+  name: "TestSlice",
   props: {
     slice: {
       type: Object,

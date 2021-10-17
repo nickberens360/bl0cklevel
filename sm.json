@@ -1,6 +1,6 @@
 {
   "libraries": [
-    "@/slices",
+    "@/components/slices",
     "vue-essential-slices"
   ],
   "apiEndpoint": "https://bl0cklevel.cdn.prismic.io/api/v2",

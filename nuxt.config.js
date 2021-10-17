@@ -100,7 +100,8 @@ export default {
   },
 
   storybook: {
-    stories: ["~/slices/**/*.stories.js"]
+    stories: ["~/.slicemachine/assets/**/*.stories.@(js|jsx|ts|tsx|svelte)"]
+
   },
   ignore: ["**/*.stories.js"],
 

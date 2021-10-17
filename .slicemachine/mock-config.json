@@ -9,5 +9,19 @@
         }
       }
     }
+  },
+  "components/slices": {
+    "TestSlice": {
+      "default-slice": {
+        "primary": {
+          "image": {
+            "content": "https://images.unsplash.com/photo-1495476479092-6ece1898a101"
+          },
+          "picker": {
+            "content": "#37d67a"
+          }
+        }
+      }
+    }
   }
 }
